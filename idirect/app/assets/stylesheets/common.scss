@@ -1,0 +1,30 @@
+@import "mixins";
+@import "variable";
+/*common*/
+*{outline:none;margin:0px;padding:0px}
+.container-fluid{max-width:970px;margin:0px auto}
+a{text-decoration:none;}
+a:hover,a:focus{text-decoration:none;outline:none}
+.common_class{@include float-left-width}
+.right{float:right}
+.left{float:left}
+li{list-style:none; @extend .left;}
+.text-center{text-align:center}
+h1,h2,h3{font-family:$font2}
+
+/*header*/
+.main-header{background:url("/images/topbanner.png")no-repeat center center;@include float-left-width }
+.nav{margin:24px 0px}
+.menu-right li {
+     margin-right: 40px;
+    &:last-child{ margin-right: 0px;}
+    a{font-family:$font1;font-size:$size1;color:$white;font-weight:bold}
+}
+.banner-contain{
+   h1{font-weight:400;font-size:59px; color:$white}
+  p{font-weight:300;font-family:$font2;font-size:30px; color:$white}
+ 
+}
+ .download_button a{font-family:$font1;color:$white;font-size:22px;background:$color1;padding:20px 50px 24px 24px;@include border-radius(5px); display: inline-block;}
+/*footer*/
+.footer a{color:$color2;font-size:$size2;font-family:$font1}

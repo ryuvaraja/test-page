@@ -13,7 +13,7 @@ li{list-style:none; @extend .left;}
 h1,h2,h3{font-family:$font2}
 
 /*header*/
-.main-header{background:url("/images/topbanner.png")no-repeat center center;@include float-left-width }
+.main-header{background:url("/images/topbanner.png")no-repeat center center transparent;@include float-left-width;margin-bottom:60px}
 .nav{margin:24px 0px}
 .menu-right li {
      margin-right: 40px;
@@ -25,6 +25,124 @@ h1,h2,h3{font-family:$font2}
   p{font-weight:300;font-family:$font2;font-size:30px; color:$white}
  
 }
+.list_group{margin-bottom: 70px;}
+.sub_list {
+  float: left;
+  width: 28%;
+  text-align: center;
+  margin-right: 4%;
+  &:last-child{margin-right: 0px;}
+  .heading a{padding:20px;@include border-radius(50%);background-color: $color3;display: inline-block;margin-bottom:20px;}
+
+  &.col1 a{background-position: 0px 0px}
+  .discription {a{font-family:$font2;font-weight:400;font-size:32px;color:$color5;margin-bottom: 35px;display: inline-block;
+  }p{font-family: $font1;color:$color4;font-size:14px;line-height: 24px; }}
+  }
+
  .download_button a{font-family:$font1;color:$white;font-size:22px;background:$color1;padding:20px 50px 24px 24px;@include border-radius(5px); display: inline-block;}
+.blockquote {
+  margin-bottom:30px;
+  h2 {
+    color: $color5;
+    font-family: $font2;
+    font-weight: 400;
+    font-size: 32px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 35px;
+    span {
+      background-color: $white;
+      position: relative;
+      padding: 0px 10px;
+      z-index: 1
+    }
+    &:after {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      content: "";
+      border-bottom: 1px solid $color5;
+      width: 100%
+    }
+  }
+}
+.common_blockqute {
+  width: 70%;
+  margin: 0px auto;
+  .discription{
+          p{font-family: $font1;color:$color4;font-size:18px;line-height: 40px; position:relative;
+  &:before{position:absolute;left:0px;top:0pc;width:20px;height:20px;background:url("/images/img2.png") no-repeat top center transparent;content:""}}
+}}
+.author_blk {
+  margin: 0px auto;
+  width: 50%;
+}
+.list_img {
+  @include float-left-width;
+}
+.author_img{margin-right:5px}
+.author_details {
+  p {
+    line-height: 24px;
+    text-align: left;
+    font-size: 12px;
+    font-family: $font1;
+    color: $color7; a {
+    color: $color6;
+  }
+
+  }
+  p.head{font-size: 14px}
+}
 /*footer*/
-.footer a{color:$color2;font-size:$size2;font-family:$font1}
+.footer_top{background: url("/images/bg.png") repeat top left transparent;padding:30px 0px;border-top: 1px solid $color7;
+  border-bottom: 1px solid $color7;
+  box-shadow: inset 0px 0px 10px $color7;
+h2{    color: $color5;
+  font-family: $font2;
+  font-weight: 400;
+  font-size: 32px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;}
+  ul{margin: 0px auto;
+    overflow: hidden;text-align: center;
+    width: 70%; li {width:20%; a{font-size: 18px;font-family:$font2;font-weight:300;color:$color8;
+    span{display:block;}
+ span:first-child {
+      background: url("/images/icone1.png") no-repeat top left transparent;
+      width: 44px;
+      clear: both;
+   margin-bottom: 15px;
+      height: 48px;
+      display: inline-block;
+    }}
+    &.mac a span:first-child {
+      background-position: 0px -314px;
+
+  }
+    &.windows a span:first-child {
+      background-position: 0px -266px;
+
+    }
+    &.linux a span:first-child {
+      background-position:0px -366px;
+
+    }
+    &.android a span:first-child {
+      background-position: 0px -169px;
+
+    }
+    &.ios a span:first-child {
+      background-position: 0px -219px;
+
+    }
+  }}
+}
+
+.footer_bottom{ background:$color9;padding:20px 0px; ul.left li {
+  a{text-decoration: underline;
+ padding: 0px 15px 0px;border-right:1px solid $color2;}
+  &:first-child a{padding-left:0px}
+  &:last-child a{padding-right:0px;border:0px}}
+a{color:$color2;font-size:$size2;font-family:$font1;}}

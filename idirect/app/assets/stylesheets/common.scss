@@ -13,7 +13,7 @@ li{list-style:none; @extend .left;}
 h1,h2,h3{font-family:$font2}
 
 /*header*/
-.main-header{background:url("/images/topbanner.png")no-repeat center center transparent;@include float-left-width;margin-bottom:60px}
+.main-header{background:url("/images/topbanner.png")no-repeat top center transparent;@include float-left-width;margin-bottom:60px}
 .nav{margin:24px 0px}
 .menu-right li {
      margin-right: 40px;
@@ -21,6 +21,7 @@ h1,h2,h3{font-family:$font2}
     a{font-family:$font1;font-size:$size1;color:$white;font-weight:bold}
 }
 .banner-contain{
+  margin-bottom: 30px;
    h1{font-weight:400;font-size:59px; color:$white}
   p{font-weight:300;font-family:$font2;font-size:30px; color:$white}
  
@@ -39,7 +40,65 @@ h1,h2,h3{font-family:$font2}
   }p{font-family: $font1;color:$color4;font-size:14px;line-height: 24px; }}
   }
 
- .download_button a{font-family:$font1;color:$white;font-size:22px;background:$color1;padding:20px 50px 24px 24px;@include border-radius(5px); display: inline-block;}
+ .download_button {position: relative;margin-bottom:20px;
+   > span {
+     display: inline-block;
+     padding: 10px;
+     background: url("/images/bg1.png") repeat top left transparent;
+   }
+   .download{font-family:$font1;color:$white;font-size:22px;background:$color1;padding: 24px 24px;@include border-radius(5px); display: inline-block;}
+  }
+.social_icons {
+  float: left;
+  width: 330px;
+  box-shadow: 2px 2px 2px #ccc;
+  background: $white;
+  padding: 15px 6px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -155px;
+  li{
+  width:100%;
+    a{
+    font-family:$font3;color:$color11;font-size:22px;padding:10px;float:left;width:86%;
+      &:hover{background: $color7;@include border-radius(10px)}
+      span:first-child{
+        background: url("/images/icone1.png") no-repeat transparent;
+        width:45px;height:35px;float:left
+      }
+      .space {
+        padding-top: 8px;
+        float: left;
+      }
+
+  }
+}
+  .win span {
+    background-position: 0px -105px!important;
+  }
+  .mac span {
+    background-position: 0px -68px!important;
+  }
+  .chrome span {
+    background-position: 0px -136px!important;
+  }
+  .android span {
+    background-position: 0px 0px!important;
+  }
+  .iphone span {
+    background-position: 0px -34px!important;
+  }
+  h4{font-family:$font3;color:$color10;font-size:16px;margin:10px 0px;font-weight: 300;}
+}
+.social_icons_left {
+  float: left;
+  width: 48%;
+  padding-right: 5px;
+  border-right:1px solid $color7;
+  &:last-child{border:0px;margin-left:5px;padding:0px; }
+}
+
 .blockquote {
   margin-bottom:30px;
   h2 {

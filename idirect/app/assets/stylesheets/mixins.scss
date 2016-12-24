@@ -1,37 +1,58 @@
-@mixin padding($paddingtop,$paddingbottom,$paddingleft,$paddingright){
-  padding-top:$paddingtop;
-   padding-right:$paddingbottom;
-    padding-bottom:$paddingleft;
-     padding-left:$paddingright;
-    
+@mixin padding($paddingtop,
+$paddingbottom,
+$paddingleft,
+$paddingright) {
+    padding-top: $paddingtop;
+    padding-right: $paddingbottom;
+    padding-bottom: $paddingleft;
+    padding-left: $paddingright;
 }
-
-@mixin margin($margintop,$marginbottom,$marginleft,$marginright){
-  margin-top:$margintop;
-   margin-right:$marginbottom;
-    margin-bottom:$marginleft;
-     margin-left:$marginright;
-    
+@mixin margin($margintop,
+$marginbottom,
+$marginleft,
+$marginright) {
+    margin-top: $margintop;
+    margin-right: $marginbottom;
+    margin-bottom: $marginleft;
+    margin-left: $marginright;
 }
-
-@mixin box-shadow($sh1,$sh2,$sh3,$sh4){
-  -webkit-box-shadow: $sh1 $sh2 $sh3 $sh4;-moz-box-shadow:$sh1 $sh2 $sh3 $sh4; box-shadow:$sh1 $sh2 $sh3 $sh4;
-  
+@mixin box-shadow($sh1,
+$sh2,
+$sh3,
+$sh4) {
+    -webkit-box-shadow: $sh1 $sh2 $sh3 $sh4;
+    -moz-box-shadow: $sh1 $sh2 $sh3 $sh4;
+    box-shadow: $sh1 $sh2 $sh3 $sh4;
 }
-@mixin transition($t,$t1,$t2){
-         transition: $t $t1 $t2;
+@mixin transition($t,
+$t1,
+$t2) {
+    transition: $t $t1 $t2;
     -webkit-transition: $t $t1 $t2;
     -moz-transition: $t $t1 $t2;
-    -ms-transition:$t $t1 $t2;
+    -ms-transition: $t $t1 $t2;
 }
 @mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
 }
-
-@mixin relative{position: relative}
-
-@mixin float-left-width{float:left; width:100%;}
-@mixin float-right-width{float:right; width:100%;}
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    transform: $transform;
+    -o-transform: $transform;
+}
+@mixin relative {
+    position: relative
+}
+@mixin float-left-width {
+    float: left;
+    width: 100%;
+}
+@mixin float-right-width {
+    float: right;
+    width: 100%;
+}

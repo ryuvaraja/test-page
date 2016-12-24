@@ -1,0 +1,87 @@
+@media only screen and (max-width: 969px) {
+    .sub_list {
+        width: 30%;
+    }
+    .container-fluid {
+        max-width: 98%;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .sub_list {
+        width: 100%;
+        margin-right: 0px
+    }
+    .banner-contain h1 {
+        font-size: 43px;
+    }
+    .banner-contain p {
+        font-size: 24px;
+    }
+    .sub_list .discription a,
+    .footer_top h2 {
+        font-size: 26px;
+    }
+    .blockquote h2 {
+        font-size: 28px;
+    }
+    .banner-contain,
+    .main-header,
+    .sub_list .discription a,
+    .sub_list .discription,
+    .list_group {
+        margin-bottom: 15px;
+    }
+    .author_blk {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 540px) {
+    .common_blockqute .discription p:before {
+        left: -80px;
+    }
+    .common_blockqute .discription p:after {
+        right: -20px
+    }
+    .author_blk {
+        width: 100%;
+    }
+    .common_blockqute {
+        width: 62%;
+    }
+    .blockquote h2:after {
+        top: 100%;
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .footer_top ul {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 399px) {
+    .social_icons {
+        width: 162px;
+        margin-left: -81px;
+    }
+    .social_icons h4 {
+        margin-bottom: 0px
+    }
+    .social_icons_left,
+    .social_icons_left:last-child {
+        width: 100%;
+        border: 0px;
+        clear: both;
+        margin: 0px auto;
+    }
+    .footer_top ul li {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .footer_top ul li a span:first-child {
+        margin-bottom: 0px
+    }
+    .footer_bottom.common_class ul.right {
+        float: left;
+        margin-top: 10px;
+    }
+}

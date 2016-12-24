@@ -1,207 +1,418 @@
 @import "mixins";
 @import "variable";
 /*common*/
-*{outline:none;margin:0px;padding:0px}
-.container-fluid{max-width:970px;margin:0px auto}
-a{text-decoration:none;}
-a:hover,a:focus{text-decoration:none;outline:none}
-.common_class{@include float-left-width}
-.right{float:right}
-.left{float:left}
-li{list-style:none; @extend .left;}
-.text-center{text-align:center}
-h1,h2,h3{font-family:$font2}
 
+* {
+    outline: none;
+    margin: 0px;
+    padding: 0px
+}
+.container-fluid {
+    max-width: 970px;
+    margin: 0px auto;
+    padding: 0px 10px
+}
+a {
+    text-decoration: none;
+}
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: none
+}
+.common_class {
+    @include float-left-width
+}
+.right {
+    float: right
+}
+.left {
+    float: left
+}
+li {
+    list-style: none;
+    @extend .left;
+}
+.text-center {
+    text-align: center
+}
+h1,
+h2,
+h3 {
+    font-family: $font2
+}
+img {
+    max-width: 100%;
+}
 /*header*/
-.main-header{background:url("/images/topbanner.png")no-repeat top center transparent;@include float-left-width;margin-bottom:60px}
-.nav{margin:24px 0px}
-.menu-right li {
-     margin-right: 40px;
-    &:last-child{ margin-right: 0px;}
-    a{font-family:$font1;font-size:$size1;color:$white;font-weight:bold}
+
+.main-header {
+    background: url("/images/topbanner.png")no-repeat top center $color12;
+    @include float-left-width;
+    margin-bottom: 60px
 }
-.banner-contain{
-  margin-bottom: 30px;
-   h1{font-weight:400;font-size:59px; color:$white}
-  p{font-weight:300;font-family:$font2;font-size:30px; color:$white}
- 
+.nav {
+    margin: 24px 0px
 }
-.list_group{margin-bottom: 70px;}
+.menu-right {
+    margin-top: 26px;
+    li {
+        margin-right: 40px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        a {
+            font-family: $font1;
+            font-size: $size1;
+            color: $white;
+            font-weight: bold
+        }
+    }
+}
+.banner-contain {
+    margin-bottom: 30px;
+    h1 {
+        font-weight: 400;
+        font-size: 59px;
+        color: $white
+    }
+    p {
+        font-weight: 300;
+        font-family: $font2;
+        font-size: 30px;
+        color: $white
+    }
+}
+.banner_img img {
+    display: block;
+    margin: 0px auto;
+}
+.list_group {
+    margin-bottom: 70px;
+}
 .sub_list {
-  float: left;
-  width: 28%;
-  text-align: center;
-  margin-right: 4%;
-  &:last-child{margin-right: 0px;}
-  .heading a{padding:20px;@include border-radius(50%);background-color: $color3;display: inline-block;margin-bottom:20px;}
-
-  &.col1 a{background-position: 0px 0px}
-  .discription {a{font-family:$font2;font-weight:400;font-size:32px;color:$color5;margin-bottom: 35px;display: inline-block;
-  }p{font-family: $font1;color:$color4;font-size:14px;line-height: 24px; }}
-  }
-
- .download_button {position: relative;margin-bottom:20px;
-   > span {
-     display: inline-block;
-     padding: 10px;
-     background: url("/images/bg1.png") repeat top left transparent;
-   }
-   .download{font-family:$font1;color:$white;font-size:22px;background:$color1;padding: 24px 24px;@include border-radius(5px); display: inline-block;}
-  }
-.social_icons {
-  float: left;
-  width: 330px;
-  box-shadow: 2px 2px 2px #ccc;
-  background: $white;
-  padding: 15px 6px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -155px;
-  li{
-  width:100%;
-    a{
-    font-family:$font3;color:$color11;font-size:22px;padding:10px;float:left;width:86%;
-      &:hover{background: $color7;@include border-radius(10px)}
-      span:first-child{
-        background: url("/images/icone1.png") no-repeat transparent;
-        width:45px;height:35px;float:left
-      }
-      .space {
-        padding-top: 8px;
-        float: left;
-      }
-
-  }
+    float: left;
+    width: 28%;
+    text-align: center;
+    margin-right: 4%;
+    & img {
+        @include transition(0.35s, linear, 0s);
+        &:hover {
+            @include transform(rotate(360deg))
+        }
+    }
+    &:last-child {
+        margin-right: 0px;
+    }
+    .heading a {
+        padding: 20px;
+        @include border-radius(50%);
+        background-color: $color3;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    &.col1 a {
+        background-position: 0px 0px
+    }
+    .discription {
+        a {
+            font-family: $font2;
+            font-weight: 400;
+            font-size: 32px;
+            color: $color5;
+            margin-bottom: 35px;
+            display: inline-block;
+        }
+        p {
+            font-family: $font1;
+            color: $color4;
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
 }
-  .win span {
-    background-position: 0px -105px!important;
-  }
-  .mac span {
-    background-position: 0px -68px!important;
-  }
-  .chrome span {
-    background-position: 0px -136px!important;
-  }
-  .android span {
-    background-position: 0px 0px!important;
-  }
-  .iphone span {
-    background-position: 0px -34px!important;
-  }
-  h4{font-family:$font3;color:$color10;font-size:16px;margin:10px 0px;font-weight: 300;}
+.download_button {
+    position: relative;
+    margin-bottom: 20px;
+    > .down_blk {
+        display: inline-block;
+        padding: 10px;
+        background: url("/images/1pixcel.png") repeat top left transparent;
+        @include border-radius(5px);
+        @include transition(all, 2s, ease);
+        &:hover .social_icons {
+            opacity: 1;
+            visibility: visible;
+            @include transition(all, 2s, ease);
+        }
+    }
+    .download {
+        font-family: $font1;
+        color: $white;
+        font-size: 22px;
+        background: $color1;
+        padding: 16px 50px 17px 23px;
+        @include border-radius(5px);
+        display: inline-block;
+        position: relative;
+    }
+    .icon {
+        width: 20px;
+        height: 25px;
+        background: url("/images/icone1.png") no-repeat -11px -417px transparent;
+        float: right;
+        z-index: 1;
+        position: absolute;
+        right: 18px;
+        top: 50%;
+        margin-top: -10px;
+    }
+}
+.social_icons {
+    float: left;
+    opacity: 0;
+    visibility: hidden;
+    @include transition(all, 2s, ease);
+    width: 348px;
+    box-shadow: 0px 0px 5px 0px $color5;
+    background: $white;
+    padding: 15px 6px;
+    position: absolute;
+    top: 100%;
+    @include border-radius(10px);
+    left: 48%;
+    margin-top: 13px;
+    margin-left: -155px;
+    &:before {
+        border-style: solid;
+        border-width: 3px 9px 12px 11px;
+        border-color: transparent transparent $white transparent;
+        position: absolute;
+        top: -15px;
+        right: 48%;
+        content: "";
+    }
+    li {
+        width: 100%;
+        a {
+            font-family: $font3;
+            color: $color11;
+            font-size: 22px;
+            padding: 10px;
+            float: left;
+            width: 86%;
+            &:hover {
+                background: $color13;
+                @include border-radius(10px)
+            }
+            span:first-child {
+                background: url("/images/icone1.png") no-repeat transparent;
+                width: 45px;
+                height: 35px;
+                float: left
+            }
+            .space {
+                padding-top: 8px;
+                float: left;
+            }
+        }
+    }
+    .win span {
+        background-position: 0px -105px!important;
+    }
+    .mac span {
+        background-position: 0px -68px!important;
+    }
+    .chrome span {
+        background-position: 0px -136px!important;
+    }
+    .android span {
+        background-position: 0px 0px!important;
+    }
+    .iphone span {
+        background-position: 0px -34px!important;
+    }
+    h4 {
+        font-family: $font3;
+        color: $color10;
+        font-size: 16px;
+        margin: 4px 17px 10px 18px;
+        font-weight: bold;
+        text-align: left;
+    }
 }
 .social_icons_left {
-  float: left;
-  width: 48%;
-  padding-right: 5px;
-  border-right:1px solid $color7;
-  &:last-child{border:0px;margin-left:5px;padding:0px; }
+    float: left;
+    width: 48%;
+    padding-right: 5px;
+    border-right: 1px solid $color7;
+    &:last-child {
+        border: 0px;
+        margin-left: 5px;
+        padding: 0px;
+    }
 }
-
 .blockquote {
-  margin-bottom:30px;
-  h2 {
-    color: $color5;
-    font-family: $font2;
-    font-weight: 400;
-    font-size: 32px;
-    text-align: center;
-    position: relative;
-    margin-bottom: 35px;
-    span {
-      background-color: $white;
-      position: relative;
-      padding: 0px 10px;
-      z-index: 1
+    margin-bottom: 30px;
+    h2 {
+        color: $color5;
+        font-family: $font2;
+        font-weight: 400;
+        font-size: 32px;
+        text-align: center;
+        position: relative;
+        margin-bottom: 35px;
+        span {
+            background-color: $white;
+            position: relative;
+            padding: 0px 10px;
+            z-index: 1
+        }
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            content: "";
+            border-bottom: 1px solid $color7;
+            width: 100%
+        }
     }
-    &:after {
-      position: absolute;
-      top: 50%;
-      left: 0px;
-      content: "";
-      border-bottom: 1px solid $color5;
-      width: 100%
-    }
-  }
 }
 .common_blockqute {
-  width: 70%;
-  margin: 0px auto;
-  .discription{
-          p{font-family: $font1;color:$color4;font-size:18px;line-height: 40px; position:relative;
-  &:before{position:absolute;left:0px;top:0pc;width:20px;height:20px;background:url("/images/img2.png") no-repeat top center transparent;content:""}}
-}}
+    width: 70%;
+    margin: 0px auto;
+    .discription {
+        p {
+            font-family: $font1;
+            color: $color4;
+            font-size: 18px;
+            line-height: 40px;
+            position: relative;
+            &:before {
+                background: rgba(0, 0, 0, 0) url("/images/img2.png") no-repeat scroll 0 -269px;
+                content: "";
+                height: 38px;
+                left: -77px;
+                position: absolute;
+                top: -15px;
+                width: 70px;
+            }
+            &:after {
+                background: rgba(0, 0, 0, 0) url("/images/img2.png") no-repeat scroll 0 -315px;
+                bottom: -10px;
+                content: "";
+                height: 38px;
+                position: absolute;
+                right: 70px;
+                width: 70px;
+            }
+        }
+    }
+}
 .author_blk {
-  margin: 0px auto;
-  width: 50%;
+    margin: 0px auto;
+    width: 34%;
 }
 .list_img {
-  @include float-left-width;
+    @include float-left-width;
 }
-.author_img{margin-right:5px}
+.author_img {
+    margin-right: 5px
+}
 .author_details {
-  p {
-    line-height: 24px;
-    text-align: left;
-    font-size: 12px;
-    font-family: $font1;
-    color: $color7; a {
-    color: $color6;
-  }
-
-  }
-  p.head{font-size: 14px}
+    p {
+        line-height: 24px;
+        text-align: left;
+        font-size: 12px;
+        font-family: $font1;
+        color: $color7;
+        a {
+            color: $color6;
+        }
+    }
+    p.head {
+        font-size: 14px
+    }
 }
 /*footer*/
-.footer_top{background: url("/images/bg.png") repeat top left transparent;padding:30px 0px;border-top: 1px solid $color7;
-  border-bottom: 1px solid $color7;
-  box-shadow: inset 0px 0px 10px $color7;
-h2{    color: $color5;
-  font-family: $font2;
-  font-weight: 400;
-  font-size: 32px;
-  text-align: center;
-  position: relative;
-  margin-bottom: 50px;}
-  ul{margin: 0px auto;
-    overflow: hidden;text-align: center;
-    width: 70%; li {width:20%; a{font-size: 18px;font-family:$font2;font-weight:300;color:$color8;
-    span{display:block;}
- span:first-child {
-      background: url("/images/icone1.png") no-repeat top left transparent;
-      width: 44px;
-      clear: both;
-   margin-bottom: 15px;
-      height: 48px;
-      display: inline-block;
-    }}
-    &.mac a span:first-child {
-      background-position: 0px -314px;
 
-  }
-    &.windows a span:first-child {
-      background-position: 0px -266px;
-
+.footer_top {
+    background: url("/images/bg.png") repeat top left transparent;
+    padding: 30px 0px 46px;
+    border-top: 1px solid $color7;
+    border-bottom: 1px solid $color7;
+    box-shadow: inset 0px 0px 10px $color7;
+    h2 {
+        color: $color5;
+        font-family: $font2;
+        font-weight: 400;
+        font-size: 32px;
+        text-align: center;
+        position: relative;
+        margin-bottom: 50px;
     }
-    &.linux a span:first-child {
-      background-position:0px -366px;
-
+    ul {
+        margin: 0px auto;
+        overflow: hidden;
+        text-align: center;
+        width: 70%;
+        li {
+            width: 20%;
+            a {
+                font-size: 18px;
+                font-family: $font2;
+                font-weight: 300;
+                color: $color8;
+                span {
+                    display: block;
+                }
+                span:first-child {
+                    background: url("/images/icone1.png") no-repeat top left transparent;
+                    width: 44px;
+                    clear: both;
+                    margin-bottom: 15px;
+                    height: 48px;
+                    display: inline-block;
+                }
+            }
+            &.mac a span:first-child {
+                background-position: 0px -314px;
+            }
+            &.windows a span:first-child {
+                background-position: 0px -266px;
+            }
+            &.linux a span:first-child {
+                background-position: 0px -366px;
+            }
+            &.android a span:first-child {
+                background-position: 0px -169px;
+            }
+            &.ios a span:first-child {
+                background-position: 0px -219px;
+            }
+        }
     }
-    &.android a span:first-child {
-      background-position: 0px -169px;
-
-    }
-    &.ios a span:first-child {
-      background-position: 0px -219px;
-
-    }
-  }}
 }
-
-.footer_bottom{ background:$color9;padding:20px 0px; ul.left li {
-  a{text-decoration: underline;
- padding: 0px 15px 0px;border-right:1px solid $color2;}
-  &:first-child a{padding-left:0px}
-  &:last-child a{padding-right:0px;border:0px}}
-a{color:$color2;font-size:$size2;font-family:$font1;}}
+.footer_bottom {
+    background: $color9;
+    padding: 20px 0px;
+    ul.left li {
+        a {
+            text-decoration: underline;
+            padding: 0px 15px 0px;
+            border-right: 1px solid $color2;
+        }
+        &:first-child a {
+            padding-left: 0px
+        }
+        &:last-child a {
+            padding-right: 0px;
+            border: 0px
+        }
+    }
+    a {
+        color: $color2;
+        font-size: $size2;
+        font-family: $font1;
+    }
+}

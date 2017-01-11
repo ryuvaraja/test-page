@@ -29,19 +29,14 @@
              var $event = $(e.target);
         if($($event).hasClass("nav_button"))
                {
-        	$(".menu_small").addClass("in")
-                	$( ".menu-right" ).slideToggle( "slow")
-                		
-          	}          	
-     
-        else if($($event).hasClass("close")){
-        	 		
-         	          	$( ".menu-right").slideToggle( "slow",function(){
+               $(".menu_small").addClass("in");$( ".menu-right" ).slideToggle( "slow")
+               	}
+           else if($($event).hasClass("close")){
+               	          	$( ".menu-right").slideToggle("slow",function(){
                 		$(".menu_small").removeClass("in")
                 	})         
         }
         else{
-     
         	$(".menu-right").slideUp("slow",function(){
                 		$(".menu_small").removeClass("in")
                 	})        

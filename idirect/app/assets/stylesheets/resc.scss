@@ -13,6 +13,10 @@
     display: inline-block;
     padding: 10px 0px;
 }
+    .menu-right li a:hover {
+        background:#303030;
+
+    }
 .menu-right li {
     width: 100%;
     margin:0px;
@@ -28,12 +32,12 @@
     width: 100%;
 }
 .nav{position:relative}
-.menu_small{    float: right;margin-top:26px;
-    padding: 10px;display:block}
+.menu_small{    float: right;margin-top:10px;
+    padding: 10px 10px 21px 10px;display:block}
 .menu_small.in {
 
     background: #000;
-    margin-top: 26px;
+
 }
 .menu_small.in .close{display:block;}
 .menu_small.in .nav_button{display:none;}
@@ -79,22 +83,18 @@
     }
 }
 @media only screen and (max-width: 540px) {
-    .common_blockqute .discription p:before {
-        left: -80px;
-    }
-    .common_blockqute .discription p:after {
-        right: -20px
-    }
+
     .author_blk {
         width: 100%;
     }
     .common_blockqute {
-        width: 62%;
+        width: 83%;
     }
     .blockquote h2:after {
         top: 100%;
         margin-top: 10px;
     }
+
 }
 @media only screen and (max-width: 479px) {
     .footer_top ul {

@@ -34,20 +34,20 @@
         transform: perspective(400px) rotateY(0deg);
     }
 }
-.footer_top ul li {
-    -webkit-transition: -webkit-transform 0.5s ease 0s;
-    -moz-transition: -moz-transform 0.5s ease 0s;
-    -o-transition: -o-transform 0.5s ease 0s;
-    -ms-transition: -ms-transform 0.5s ease 0s;
-    transition: transform 0.5s ease 0s;
-}
-.footer_top ul li:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-}
+// .footer_top ul li {
+    // -webkit-transition: -webkit-transform 0.5s ease 0s;
+    // -moz-transition: -moz-transform 0.5s ease 0s;
+    // -o-transition: -o-transform 0.5s ease 0s;
+    // -ms-transition: -ms-transform 0.5s ease 0s;
+    // transition: transform 0.5s ease 0s;
+// }
+// .footer_top ul li:hover {
+    // -webkit-transform: scale(1.1);
+    // -moz-transform: scale(1.1);
+    // -ms-transform: scale(1.1);
+    // -o-transform: scale(1.1);
+    // transform: scale(1.1);
+// }
 .sub_list,
 .logo,
 .nav,

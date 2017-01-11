@@ -6,13 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
     <meta name="description" content="go to is site">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.6.3/flexslider.min.css" rel="stylesheet" />
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
 <div class="wrapper">
 <%= yield %>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript">
+  	$(function(){
+  		 $('.flexslider').flexslider({
+        animation: "slide",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+      
+          $(document).click(function (e) {
+             var $event = $(e.target);
+        if($($event).hasClass("nav_button"))
+               {
+        	$(".menu_small").addClass("in")
+                	$( ".menu-right" ).slideToggle( "slow")
+                		
+          	}          	
+     
+        else if($($event).hasClass("close")){
+        	 		
+         	          	$( ".menu-right").slideToggle( "slow",function(){
+                		$(".menu_small").removeClass("in")
+                	})         
+        }
+        else{
+     
+        	$(".menu-right").slideUp("slow",function(){
+                		$(".menu_small").removeClass("in")
+                	})        
+        }
+        });
+$(document).keyup(function(e) {
+     if (e.keyCode == 27) { 
+     	$(".menu-right").slideUp("slow");
+     	$(".menu_small").removeClass("in")
+    }
+
+});
+
+  	});
+  </script>
 </div>
 </body>
 </html>

@@ -6,6 +6,49 @@
         max-width: 98%;
     }
 }
+@media only screen and (max-width: 768px) {
+  .menu-right li a {
+     background: #000;
+    width: 100%;
+    display: inline-block;
+    padding: 10px 0px;
+}
+.menu-right li {
+    width: 100%;
+    margin:0px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.menu-right {
+    margin-top:0px;
+    position: absolute;
+    right: 0px;
+    display:none;
+    top:100%;
+    width: 100%;
+}
+.nav{position:relative}
+.menu_small{    float: right;margin-top:26px;
+    padding: 10px;display:block}
+.menu_small.in {
+
+    background: #000;
+    margin-top: 26px;
+}
+.menu_small.in .close{display:block;}
+.menu_small.in .nav_button{display:none;}
+.menu_small .close {
+    background: transparent;
+    border: 0px;
+    font-size: 14px;
+    width:31px;
+    height:26px;
+    color: #fff;
+    display:none;
+    bottom: 12px;
+}
+
+}
 @media only screen and (max-width: 767px) {
     .sub_list {
         width: 100%;

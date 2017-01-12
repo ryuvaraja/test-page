@@ -46,19 +46,31 @@
             }
 
         }
+      if(!$event.hasClass("download")){
+$(".social_icons").hide()
+      }
 
 
         });
 $(document).keyup(function(e) {
-     if (e.keyCode == 27) { 
-     	$(".menu-right").slideUp("slow");
-     	$(".menu_small").removeClass("in")
+     if (e.keyCode == 27) {
+             	$( ".menu-right").slideToggle("slow",function(){
+                             		$(".menu_small").removeClass("in")
+                             	})
+                             	$(".social_icons").hide();
     }
 
 });
   $(".download").click(function(e){e.preventDefault();$(".social_icons").toggle()});
   $(window).resize(function(){
-  	$(".menu_small").removeClass("in")
+    		$(".menu_small").removeClass("in");
+    		$(".social_icons").hide();
+    		if($(window).width()<769){
+    		$( ".menu-right").hide()
+
+    		}else{
+    		$( ".menu-right").show()
+    		}
   });
   	});
   </script>
